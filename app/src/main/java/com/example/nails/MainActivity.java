@@ -13,15 +13,17 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 EditText edUsername,edPassword;
 Button btn;
-TextView tv;
+TextView tv1;
 
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,19 +37,20 @@ TextView tv;
                 }
             }
         });
-        tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            startActivity(new Intent(MainActivity.this, Register.class));
-            }
-        });
+tv1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(MainActivity.this,Register.class));
     }
-    public void init()
+});
+
+    }
+    private void init()
     {
         edUsername=findViewById(R.id.editTextLoginUsername);
         edPassword=findViewById(R.id.editTextLoginPassword);
         btn=findViewById(R.id.buttonLogin);
-        tv=findViewById(R.id.textViewNewUser);
+        tv1=findViewById(R.id.textViewNewUser);
     }
 
 }

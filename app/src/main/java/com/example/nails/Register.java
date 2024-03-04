@@ -18,6 +18,7 @@ TextView tv;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        init();
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +30,7 @@ TextView tv;
     public void init()
     {
         edUsername=findViewById(R.id.editTextRegUsername);
+        edEmail=findViewById(R.id.editTextRegEmail);
         edPassword=findViewById(R.id.editTextRegPassword);
         edConfirm=findViewById(R.id.editTextRegConfirmPassword);
         btn=findViewById(R.id.buttonRegister);
