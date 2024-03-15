@@ -94,8 +94,8 @@ TextView tv;
 
     public void init()
     {
-        edUsername=findViewById(R.id.editTextRegUsername);
-        edEmail=findViewById(R.id.editTextRegEmail);
+        edUsername=findViewById(R.id.editTextAppFullName);
+        edEmail=findViewById(R.id.editTextAppPhone);
         edPassword=findViewById(R.id.editTextRegPassword);
         edConfirm=findViewById(R.id.editTextRegConfirmPassword);
         btn=findViewById(R.id.buttonRegister);
