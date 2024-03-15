@@ -24,10 +24,17 @@ public class BookingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_booking);
         init();
         initDatePicker();
+        initTimePicker();
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 datePickerDialog.show();
+            }
+        });
+        timeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timePickerDialog.show();
             }
         });
     }
