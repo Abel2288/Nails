@@ -41,6 +41,17 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,BookingActivity.class));
             }
         });
+        CardView Prices = findViewById(R.id.Prices);
+        Prices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
+                startActivity(new Intent(HomeActivity.this,PricesActivity.class));
+            }
+        });
+
 
 
     }
