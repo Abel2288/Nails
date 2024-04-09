@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Nails"
         tools:targetApi="31">
         <activity
+            android:name=".PricesActivity"
+            android:exported="false" />
+        <activity
             android:name=".BookingActivity"
             android:exported="false" />
         <activity

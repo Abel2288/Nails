@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,7 @@ public class BookingActivity extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private TimePickerDialog timePickerDialog;
-    private Button dateButton,timeButton;
+    private Button dateButton,timeButton,RegisterButton2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,13 @@ public class BookingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 timePickerDialog.show();
             }
+        });
+        RegisterButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BookingActivity.this,HomeActivity.class));
+            }
+
         });
     }
     private void initDatePicker(){
@@ -73,6 +81,6 @@ public class BookingActivity extends AppCompatActivity {
     {
         dateButton = findViewById(R.id.buttonAppDate);
         timeButton = findViewById(R.id.buttonAppTime);
-
+        RegisterButton2 = findViewById(R.id.buttonRegister2);
     }
 }

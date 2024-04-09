@@ -42,7 +42,7 @@ TextView tv1;
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("username",username);
                         editor.apply();
-                        Toast.makeText(getApplicationContext(), "Welcome"+username,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Welcome"+ " " +username,Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this,HomeActivity.class));
                     }
                     else
